@@ -1,0 +1,202 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  font-size: 18px;
+}
+body {
+font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+font-size: 1rem;
+line-height: 1.5;
+color: white;
+}
+h1,h2,h3,h4,h5,h6 {
+font-family: "Lato", sans-serif;
+  font-weight: 400;
+color: white;
+line-height: 1.2;
+}
+.container {
+max-width: 788px;
+margin: 0 auto;
+padding: 0 2rem;
+}
+.hero {
+background-color: #27ae60;
+padding: 4rem 0;
+
+}
+.logo img {
+width: 196px;
+}
+
+.logo {
+  padding-bottom: 2rem;
+}
+
+#main-nav ul {
+list-style-type: none;
+display: flex;
+gap: 1.5rem;
+justify-content: center;
+align-items: center;
+padding-left: 0;
+}
+
+#main-nav a:link, #main-nav a:visited {
+color: white;
+text-decoration: none;
+transition: all 0.3s ease-in-out;
+}
+
+#main-nav a:hover, #main-nav a:active {
+color: black;
+text-decoration: none;
+}
+
+.flex-header {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+}
+
+.page-title {
+padding-top: 7.5rem;
+padding-bottom: 2rem;
+}
+
+.page-title h1 {
+font-size: 1.875rem;
+color: white;
+text-transform: uppercase;
+letter-spacing: 1px;
+text-align: center;
+}
+
+main {
+padding: 2.5rem 0;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+gap: 2rem;
+}
+
+.grid img {
+width: 100%;
+}
+
+#main-footer {
+background: #484848;
+padding: 2rem 0 5.625rem 0;
+text-align: center;
+}
+
+#main-footer p {
+font-size: 0.875rem;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (min-width:1000px) {
+  .container {
+    padding: 0 2rem;
+  }
+  
+.grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 2rem;
+}
+
+main {
+padding: 4.5rem 0;
+}
+
+.flex-header {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+.hero {
+padding: 2rem 0;
+}
+
+#main-nav ul {
+gap: 1.5rem;
+padding-left: 0;
+}
+
+.logo {
+  padding-bottom: 0;
+}
+
+:root {
+  font-size: 16px;
+}
+
+.mobile {
+  display: block;
+}
+}
