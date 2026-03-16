@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boutique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="min-vh-100 d-flex flex-column ">
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <a class="navbar-brand" href="#">
+                    <img src="img/synapselablogo.png" alt="logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+
+                        <li class="nav-item">
+
+                            <button type="button" class="btn btn-gold-premium" data-bs-toggle="offcanvas"
+                                data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+                                Panier <span class="badge ms-1" id="cartCount">0</span>
+                            </button>
+                        </li>
+
+                        <li class="nav-item">
+
+                            <button type="button" class="btn btn-gold-premiumSmall" data-bs-toggle="modal"
+                                data-bs-target="#contactModal">Contact</button>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5 flex-grow-1 ">
+
+        <section class="rounded-4 p-4 p-lg-5 mb-5 hero-lab">
+            <div class="row align-items-center g-4">
+
+                <div class="col-12 col-lg-9">
+                    <h1 class="display-6 fw-bold mb-2 title-gold">Protocoles d’affinités neuronales</h1>
+                    <p class="lead mb-3">
+                        Des “boosts” ciblés pour les difficultés les plus fréquentes du quotidien.
+                    </p>
+
+                    <a href="#produits" class="btn btn-gold-premium">Voir les produits</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="produits">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <h2 class="h3 mb-0 title-gold">Produits</h2>
+
+                <small class="productsCount" id="productsCount"></small>
+            </div>
+
+            <div class="row g-4" id="productsGrid"></div>
+        </section>
+
+    </main>
+
+    <div class="modal fade" id="productDetailsModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content black-borderGold">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title titleText" id="modalTitle">Détails</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <img id="modalImg" class="img-fluid rounded mb-3" alt="">
+
+                    <p id="modalDesc" class="mb-2 regularTextCard"></p>
+
+                    <p class="regularText mb-0">Prix : <span id="modalPrice"></span></p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-gold-premium fermerProduit" data-bs-dismiss="modal">Fermer</button>
+
+                    <button class="btn btn-gold-premium" id="modalAddToCartBtn">Ajouter au panier</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content black-borderGold">
+                <div class="modal-header">
+                    <h5 class="modal-title titleText">Contact</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form id="contact-form" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label regularText" for="contactName">Nom</label>
+                            <input class="form-control" id="InputNom" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label regularText" for="contactEmail">Email</label>
+                            <input class="form-control" id="InputEmail" type="email" required>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label regularText" for="contactMsg">Message</label>
+                            <textarea class="form-control" id="InputMessage" rows="4" required></textarea>
+                            <div class="invalid-feedback"></div>
+                        </div>
+
+                        <button class="btn btn-gold-premium w-100" type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="cartOffcanvasLabel">Panier</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+        </div>
+
+        <div class="offcanvas-body black-borderGold">
+
+            <div id="cartItems"></div>
+
+            <hr>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="regularText">Total</span>
+
+                <span class="regularText" id="cartTotal">$0.00</span>
+            </div>
+
+            <div class="d-grid gap-2 mt-3">
+
+                <button class="btn btnPanier" id="clearCartBtn">Vider le panier</button>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact" class="mt-5">
+        <div class="container py-5">
+
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <h3 class="titleText">SynapseLAB</h3>
+                    <p class="mb-1">123 Rue Exemple, Gatineau (QC)</p>
+                    <p class="mb-1">Téléphone : (819) 555-1234</p>
+                    <p class="mb-0">Email : contact@synapselab-demo.ca</p>
+                </div>
+                <div class="col-12 col-md-auto ms-md-auto text-md-end">
+                    <h3 class="titleText">Suivez-nous</h3>
+                    <ul class="list-unstyled mb-0">
+                        <li><a class="link-secondary text-decoration-none" href="#" aria-label="Instagram">Instagram</a>
+                        </li>
+                        <li><a class="link-secondary text-decoration-none" href="#" aria-label="Facebook">Facebook</a>
+                        </li>
+                        <li><a class="link-secondary text-decoration-none" href="#" aria-label="TikTok">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start gap-2">
+                <small>
+                    <p>
+                        © <span id="year"></span> SynapseLab. Tous droits réservés.
+                    </p>
+                </small>
+                <a class="link-secondary text-decoration-none" href="mentions-legales.html"><small>Mentions
+                        légales</small></a>
+            </div>
+        </div>
+    </footer>
+    <button
+  id="backToTopBtn"
+  type="button"
+  class="btn btn-gold-premium back-to-top"
+  aria-label="Retour en haut"
+  title="Retour en haut">
+  <img src="img/arrowup.png" alt="Retour en haut" class="back-to-top-icon">
+</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
