@@ -5,7 +5,7 @@
     "descriptionCourte": "Pour démarrer sans lutte et rester concentré plus longtemps.",
     "descriptionLongue": "Protocole Focus+ conçu pour la procrastination et la distraction. Effets attendus (fictifs) : initiation de tâche plus facile, attention plus stable. Durée simulée : 4 à 6 heures. Indications : étude, travail, tâches administratives.",
     "prix": 29.99,
-    "image": "img/placeholder.jpg"
+    "image": "img/focus.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "descriptionCourte": "Pour calmer la rumination et favoriser l’endormissement.",
     "descriptionLongue": "Protocole Somnus pour décrocher mentalement le soir. Effets attendus (fictifs) : baisse de la rumination, endormissement plus doux. Durée simulée : 6 à 8 heures. Indications : coucher, récupération.",
     "prix": 34.99,
-    "image": "img/placeholder.jpg"
+    "image": "img/somnus.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "descriptionCourte": "Pour réduire la tension interne et retrouver une base stable.",
     "descriptionLongue": "Protocole Calme™ pour stress quotidien et surcharge émotionnelle. Effets attendus (fictifs) : agitation réduite, meilleure tolérance à l’imprévu. Durée simulée : 3 à 5 heures. Indications : journées chargées, social.",
     "prix": 27.99,
-    "image": "img/placeholder.jpg"
+    "image": "img/calme.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "descriptionCourte": "Pour retrouver l’élan quand tout semble lourd à commencer.",
     "descriptionLongue": "Protocole Drive pour inertie et manque d’initiative. Effets attendus (fictifs) : élan accru, passage à l’action plus rapide. Durée simulée : 2 à 4 heures. Indications : routines, projets perso.",
     "prix": 25.99,
-    "image": "img/placeholder.jpg"
+    "image": "img/drive.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "descriptionCourte": "Pour trier le bruit mental et décider plus facilement.",
     "descriptionLongue": "Protocole Clarity pour surcharge cognitive et difficulté à prioriser. Effets attendus (fictifs) : pensée plus linéaire, décisions facilitées. Durée simulée : 3 à 6 heures. Indications : planification, organisation.",
     "prix": 31.99,
-    "image": "img/placeholder.jpg"
+    "image": "img/clarity.jpg"
   },
   {
     "id": 6,
@@ -45,6 +45,6 @@
     "descriptionCourte": "Pour parler, poser ses limites et se sentir plus solide.",
     "descriptionLongue": "Protocole Confidence pour doute, gêne, peur du jugement. Effets attendus (fictifs) : aisance accrue, meilleure présence. Durée simulée : 2 à 4 heures. Indications : entrevues, présentations, conversations difficiles.",
     "prix": 28.99,
-    "image": "img/placeholder.jpg"
+    "image": "img/confidence.jpg"
   }
 ]
