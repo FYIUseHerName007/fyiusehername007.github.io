@@ -122,7 +122,7 @@ function createProductCard(p) {
     col.className = "col-12 col-md-6 col-lg-4";
     col.innerHTML = `
     <div class="card black-borderGold h-100 shadow-sm">
-      <img src="${p.image}" class="card-img-top" alt="${p.titre}">
+      <img src="${p.image}" class="card-img-top imgCard" alt="${p.titre}">
       <div class="card-body  d-flex flex-column">
         <h5 class="card-title titleText">${p.titre}</h5>
         <p class="card-text ">${p.descriptionCourte}</p>
@@ -207,7 +207,7 @@ function renderCart() {
     <div class="d-flex gap-3 align-items-center py-2">
       <img src="${item.image}" alt="${item.titre}" width="64" height="48" class="rounded object-fit-cover">
       <div class="flex-grow-1">
-        <div class="titleText">${item.titre}</div>
+        <div class="titleText regularText">${item.titre}</div>
         <div class="regularText">
           ${formatPriceCAD(item.prix)} × ${item.qty}
         </div>
@@ -237,7 +237,7 @@ const backToTopBtn = document.getElementById("backToTopBtn");
 function toggleBackToTopButton() {
     if (!backToTopBtn) return;
 
-    if (window.scrollY > 100) {
+    if (window.scrollY > 500) {
         backToTopBtn.classList.add("show");
     } else {
         backToTopBtn.classList.remove("show");

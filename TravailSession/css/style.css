@@ -3,15 +3,21 @@ body {
     min-height: 100vh;
     position: relative;
     border: 2px solid rgba(255, 214, 107, 0.75);
+    font-family: "Iceland", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
+
 .black-borderGold {
     background: rgb(10, 10, 10);
     border: 2px solid rgba(255, 214, 107, 0.75);
 }
+
 header img {
     width: 300px;
     max-width: 100%;
 }
+
 .title-gold {
     background: linear-gradient(180deg,
             #fff7cc 0%,
@@ -33,71 +39,74 @@ header img {
         0 0 12px rgba(255, 220, 115, 0.35),
         0 0 20px rgba(255, 220, 115, 0.25);
 }
+
 p {
     color: rgba(155, 150, 130, 0.75);
 }
-h3 {
-    color: rgba(155, 150, 130, 0.75);
-}
+
 .btn-gold-premium {
-background: transparent;
-  color: #d6b36a;
-  border: 1.5px solid rgba(214, 179, 106, 0.85);
-  border-radius: 8px;
-  padding: 0.45rem 0.9rem;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  box-shadow: 0 0 8px rgba(214, 179, 106, 0.18);
-  transition: all 0.25s ease;
+    background: transparent;
+    color: #d6b36a;
+    border: 1.5px solid rgba(214, 179, 106, 0.85);
+    border-radius: 8px;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 0 8px rgba(214, 179, 106, 0.18);
+    transition: all 0.25s ease;
 }
 
 .btn-gold-premium:hover {
     background: rgba(214, 179, 106, 0.08);
-  color: #f5e7b2;
-  border-color: #d6b36a;
-  box-shadow: 0 0 10px rgba(214, 179, 106, 0.28);
+    color: #f5e7b2;
+    border-color: #d6b36a;
+    box-shadow: 0 0 10px rgba(214, 179, 106, 0.28);
 }
 
 .btn-gold-premiumSmall {
-background: transparent;
-  color: #d6b36a;
-  border: 1.5px solid rgba(214, 179, 106, 0.85);
-  border-radius: 8px;
-  padding: 0.45rem 0.9rem;
-  font-size: 0.60rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  box-shadow: 0 0 8px rgba(214, 179, 106, 0.18);
-  transition: all 0.25s ease;
+    background: transparent;
+    color: #d6b36a;
+    border: 1.5px solid rgba(214, 179, 106, 0.85);
+    border-radius: 8px;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.60rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 0 8px rgba(214, 179, 106, 0.18);
+    transition: all 0.25s ease;
 }
 
 .btn-gold-premiumSmall:hover {
     background: rgba(214, 179, 106, 0.08);
-  color: #f5e7b2;
-  border-color: #d6b36a;
-  box-shadow: 0 0 10px rgba(214, 179, 106, 0.28);
+    color: #f5e7b2;
+    border-color: #d6b36a;
+    box-shadow: 0 0 10px rgba(214, 179, 106, 0.28);
 }
 
 .card {
     background: rgb(10, 10, 10);
     box-shadow:
-    0 10px 24px rgba(0,0,0,0.55),
-    0 0 0 1px rgba(255, 214, 107, 0.35) inset,
-    0 0 16px rgba(255, 204, 92, 0.25);
+        0 10px 24px rgba(0, 0, 0, 0.55),
+        0 0 0 1px rgba(255, 214, 107, 0.35) inset,
+        0 0 16px rgba(255, 204, 92, 0.25);
 }
 
 .titleText {
     color: #ffdc73;
+    font-size: 30px;
 }
 
 .regularText {
     color: rgba(206, 194, 148, 0.75);
+    font-size: 20px;
 }
+
 .regularTextCard {
     color: #ffdc73;
+    font-size: 20px;
 }
 
 .offcanvas-header {
@@ -113,6 +122,7 @@ background: transparent;
     border: 1px solid #ffdc73;
     color: #ffdc73;
 }
+
 .btnPanier:hover {
     border: 1px solid #ffdc73;
     background-color: rgb(36, 33, 28);
@@ -120,13 +130,15 @@ background: transparent;
 }
 
 .boutonX {
-        display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .badge {
     color: rgb(136, 136, 136);
 }
+
 .btn-close {
     border: 1px solid #ffdc73;
     color: #ffdc73;
@@ -172,7 +184,12 @@ background: transparent;
     color: #2b2b2b;
 }
 
-button img{
+button img {
     width: 30px;
     max-width: 100%;
+}
+
+.imgCard {
+    aspect-ratio: 4/2;
+    object-fit: cover;
 }
